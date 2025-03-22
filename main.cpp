@@ -1,5 +1,8 @@
+#include "color.hpp"
+#include "vec3.hpp"
+
 #include <iostream>
-#include <numbers>
+
 using namespace std;
 
 int main() {
@@ -11,15 +14,8 @@ int main() {
 	for (int j = 0; j < image_height; j++) {
 		clog << "\rScalines remaining: " << (image_height - j) << ' ' << flush;
 		for (int i = 0; i < image_width; i++) {
-			auto r = double(i) / (image_width - 1);
-			auto g = double(j) / (image_height - 1);
-			auto b = 3.4;
-
-			int ir = int(255.999 * r);
-			int ig = int(255.999 * g);
-			int ib = int(255.999 * b);
-
-			cout << ir << ' ' << ig << ' ' << ib << '\n';
+			auto pixel_color = color(double(i)/(image_width-1), double(j)/(image_height-1), 3.4);
+			write_color(cout, pixel_color);
 		}	
 	}
 
