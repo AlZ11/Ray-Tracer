@@ -7,8 +7,8 @@
  Rays, points, directions, colors, and surface normals, is represented using 3D vectors. This class makes it easy to do the essential math operations (like addition, scaling, dot products, and cross products) needed to calculate how rays move, bounce, and interact with objects in the scene.
 **/
 
-#ifndef VEC3_H
-#define VEC3_H
+#ifndef VEC3_HPP
+#define VEC3_HPP
 
 #include <cmath>
 #include <iostream>
